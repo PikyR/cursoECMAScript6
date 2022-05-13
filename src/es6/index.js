@@ -161,3 +161,45 @@ primerPromesa()
   .then(response => console.log(response))  
   .catch(error => console.log(error));
 /* FIN DE CLASE 04*/
+
+/**
+ * CLASE 05
+ */
+
+// ** CLASES
+class Calculator {
+  constructor() {
+    this.valueA = 0;
+    this.valueB = 0;
+  }
+  sum(valueA, valueB) {
+    this.valueA = valueA;
+    this.valueB = valueB;
+
+    return this.valueA + this.valueB;
+  }
+}
+
+const calc = new Calculator();
+console.log(calc.sum(99,1)); //100
+
+// ** IMPORT / EXPORT
+import { saludar } from './module';
+
+console.log(saludar()); // da error
+
+// ** GENERATORS
+function* primerGenerador() {
+  if (true) {
+    yield "hello"
+  }
+  if (true) {
+    yield "world"
+  }
+};
+
+const generatorHello = primerGenerador();
+console.log(generatorHello.next().value); // hello
+console.log(generatorHello.next().value); // world
+console.log(generatorHello.next().value); // undefined
+console.log(generatorHello.next().done); // true
