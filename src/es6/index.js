@@ -101,3 +101,63 @@ console.log(equipoGeneral);
 //   'SEXTO'
 // ]
 /* FIN CLASE 03 */
+
+/**
+ * CLASE 04
+ */
+
+// ** Parametros en objetos
+// JS
+const nameC4 = 'PikyR';
+const ageC4 = '22';
+
+obj = { name: nameC4, age: ageC4};
+
+// ec6
+obj2 = { nameC4, ageC4};
+
+// ** Arrow Functions
+// 
+
+const names = [
+  { name: "Peky", age: 99},
+  { name: "Coso", age: 88},
+  { name: "Comue", age: 77}
+];
+
+//JS
+let listOfNames = names.map(
+  function (item) {
+    console.log(item.name);    
+  }
+);
+
+//es6
+let listOfAges = names.map(item => console.log(item.age));
+
+const listOfNames2 = (name, age) => {
+  // declaracion de la función
+};
+
+const listOfAges2 = age => {
+  // declaracion de la función
+};
+
+const square = num => num * num;
+console.log(square(5)); //25
+
+// ** Promesas
+const primerPromesa = () => {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve("Aja!");
+    } else {
+      reject("Nai!");
+    }
+  });
+};
+
+primerPromesa()
+  .then(response => console.log(response))  
+  .catch(error => console.log(error));
+/* FIN DE CLASE 04*/
