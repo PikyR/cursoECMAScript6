@@ -13,6 +13,7 @@ if (numbers.includes(11)) {
 }
 
 // ** POTENCIAS
+// Operador de exponenciación (**)
 let base = 2;
 let exponent = 3;
 let result = base ** exponent;
